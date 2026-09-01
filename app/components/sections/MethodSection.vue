@@ -31,11 +31,12 @@
 
       <!-- Method Steps Cards -->
       <div class="method-cards">
-        <StepCard
+        <Card
           v-for="step in methodSteps"
           :key="step.number"
           :id="step.id"
-          :number="step.number"
+          :variant="'step'"
+          :label="`Step ${step.number}`"
           :title="step.title"
           :description="step.description"
           :color="step.color"

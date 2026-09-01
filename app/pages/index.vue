@@ -14,13 +14,7 @@
   <div class="landing-page">
     <HeroSection />
     <MethodSection />
-
-    <section id="maturity" class="section">
-      <div class="section-content">
-        <h1>Maturity</h1>
-        <p>Information about software maturity assessment.</p>
-      </div>
-    </section>
+    <MaturityCriteriaSection />
 
     <section id="why" class="section">
       <div class="section-content">
