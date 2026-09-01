@@ -17,13 +17,7 @@
     <MaturityCriteriaSection />
     <ValuePropositionSection />
     <WhyOpenSection />
-
-    <section id="roadmap" class="section">
-      <div class="section-content">
-        <h1>Roadmap</h1>
-        <p>Our roadmap and future plans.</p>
-      </div>
-    </section>
+    <RoadmapSection />
   </div>
 </template>
 
@@ -33,53 +27,5 @@
 <style scoped>
 .landing-page {
   width: 100%;
-}
-
-.section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-3xl);
-}
-
-.section:nth-child(odd) {
-  background-color: var(--background);
-}
-
-.section:nth-child(even) {
-  background-color: var(--surface);
-}
-
-.section-content {
-  max-width: var(--max-width-container);
-  width: 100%;
-  text-align: center;
-}
-
-.section-content h1 {
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-lg);
-  color: var(--foreground);
-}
-
-.section-content p {
-  font-size: var(--font-size-xl);
-  color: var(--muted-foreground);
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: var(--spacing-lg);
-  }
-
-  .section-content h1 {
-    font-size: var(--font-size-3xl);
-  }
-
-  .section-content p {
-    font-size: var(--font-size-base);
-  }
 }
 </style>
