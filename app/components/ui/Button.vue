@@ -17,6 +17,8 @@
     :class="[`button--${variant}`, `button--${size}`]"
     :href="href"
     :type="tag === 'button' ? type : undefined"
+    :target="target"
+    :rel="rel"
   >
     <slot />
   </component>
@@ -28,6 +30,8 @@ interface Props {
   size?: 'sm' | 'md' | 'lg'
   href?: string
   type?: 'button' | 'submit' | 'reset'
+  target?: string
+  rel?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {

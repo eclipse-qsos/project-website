@@ -18,6 +18,7 @@
     <ValuePropositionSection />
     <WhyOpenSection />
     <RoadmapSection />
+    <CTASection />
   </div>
 </template>
 
