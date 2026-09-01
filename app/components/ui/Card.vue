@@ -44,7 +44,7 @@ interface Props {
   id: string
   title: string
   description: string
-  variant?: 'step' | 'criteria'
+  variant?: 'step' | 'criteria' | 'value'
   color?: string
   label?: string
   topics?: string[]

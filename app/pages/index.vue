@@ -15,6 +15,7 @@
     <HeroSection />
     <MethodSection />
     <MaturityCriteriaSection />
+    <ValuePropositionSection />
 
     <section id="why" class="section">
       <div class="section-content">
