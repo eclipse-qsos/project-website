@@ -16,13 +16,7 @@
     <MethodSection />
     <MaturityCriteriaSection />
     <ValuePropositionSection />
-
-    <section id="why" class="section">
-      <div class="section-content">
-        <h1>Why</h1>
-        <p>Why use QSOS for your open source software selection.</p>
-      </div>
-    </section>
+    <WhyOpenSection />
 
     <section id="roadmap" class="section">
       <div class="section-content">
