@@ -13,13 +13,7 @@
 <template>
   <div class="landing-page">
     <HeroSection />
-
-    <section id="method" class="section">
-      <div class="section-content">
-        <h1>Method</h1>
-        <p>The QSOS method will be described here.</p>
-      </div>
-    </section>
+    <MethodSection />
 
     <section id="maturity" class="section">
       <div class="section-content">
