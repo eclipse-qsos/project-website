@@ -61,17 +61,31 @@
             <span>Eclipse-governed</span>
           </li>
         </ul>
+
+        <!-- Key Metrics -->
+        <div class="hero-metrics">
+          <div v-for="metric in keyMetrics" :key="metric.label" class="metric-item">
+            <div class="metric-value">{{ metric.value }}</div>
+            <div class="metric-label">{{ metric.label }}</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+const keyMetrics = [
+  { value: '4', label: 'Process steps' },
+  { value: '16', label: 'Maturity criteria' },
+  { value: '0 - 2', label: 'Scoring scale' },
+  { value: '2.0', label: 'Current method' },
+]
 </script>
 
 <style scoped>
 .hero {
-  padding: calc(var(--header-height) + var(--spacing-xs)) var(--spacing-3xl) var(--spacing-7xl);
+  padding: calc(var(--header-height) - 20px) var(--spacing-3xl) var(--spacing-7xl);
   background-color: var(--background);
 }
 
@@ -85,7 +99,7 @@
 
 .hero-badge {
   display: flex;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 .hero-title {
@@ -113,14 +127,13 @@
   display: flex;
   gap: var(--spacing-lg);
   flex-wrap: wrap;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
 }
 
 .hero-footer {
   margin-top: 0;
-  padding-top: var(--spacing-lg);
-  padding-bottom: var(--spacing-3xl);
-  border-bottom: 1px solid var(--border);
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-2xl);
   width: 100%;
 }
 
@@ -147,6 +160,42 @@
   color: var(--brand);
 }
 
+/* Key Metrics */
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 1px solid var(--border);
+}
+
+.metric-item {
+  text-align: center;
+  padding: var(--spacing-sm) 0;
+  transition: all 0.2s ease;
+}
+
+.metric-item:hover {
+  transform: translateY(-2px);
+}
+
+.metric-value {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-2xs);
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.metric-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--muted-foreground);
+  line-height: var(--line-height-snug);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero {
@@ -163,6 +212,21 @@
 
   .hero-metadata {
     gap: var(--spacing-3xl);
+  }
+
+  .hero-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-2xl);
+  }
+
+  .metric-value {
+    font-size: var(--font-size-3xl);
+  }
+
+  .metric-label {
+    font-size: var(--font-size-xs);
   }
 }
 
