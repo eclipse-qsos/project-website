@@ -1,5 +1,19 @@
+<!--
+  Copyright (c) 2026 Contributors to the Eclipse Foundation
+
+  See the NOTICE file(s) distributed with this work for additional
+  information regarding copyright ownership.
+
+  This program and the accompanying materials are made available under the
+  terms of the Apache License, Version 2.0 which is available at
+  https://www.apache.org/licenses/LICENSE-2.0
+
+  SPDX-License-Identifier: Apache-2.0
+-->
 <template>
   <div class="landing-page">
+    <HeroSection />
+
     <section id="method" class="section">
       <div class="section-content">
         <h1>Method</h1>
@@ -43,7 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: var(--spacing-3xl);
 }
 
 .section:nth-child(odd) {
@@ -55,34 +69,34 @@
 }
 
 .section-content {
-  max-width: 1200px;
+  max-width: var(--max-width-container);
   width: 100%;
   text-align: center;
 }
 
 .section-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
   color: var(--foreground);
 }
 
 .section-content p {
-  font-size: 1.25rem;
+  font-size: var(--font-size-xl);
   color: var(--muted-foreground);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 1rem;
+    padding: var(--spacing-lg);
   }
 
   .section-content h1 {
-    font-size: 2rem;
+    font-size: var(--font-size-3xl);
   }
 
   .section-content p {
-    font-size: 1rem;
+    font-size: var(--font-size-base);
   }
 }
 </style>
