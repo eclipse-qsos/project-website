@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="header-container">
       <a href="#" class="header-logo" @click.prevent="scrollToTop">
-        <img src="@/assets/images/logo-qsos.png" alt="QSOS Logo" />
+        <img src="@/assets/images/logo-qsos-legacy.png" alt="QSOS Logo" />
       </a>
 
       <nav class="header-nav">
