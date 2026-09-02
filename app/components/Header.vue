@@ -37,9 +37,16 @@
       <div class="header-actions">
         <LanguageSwitcher />
         <ThemeSwitcher />
-        <button class="cta-button" @click="handleCTAClick">
+        <Button
+          href="https://projects.eclipse.org/projects/technology.qsos"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="primary"
+          size="md"
+          class="cta-button"
+        >
           {{ $t('header.cta') }}
-        </button>
+        </Button>
         <MobileMenu />
       </div>
     </div>
@@ -66,9 +73,5 @@ const scrollToTop = () => {
     top: 0,
     behavior: 'smooth',
   })
-}
-
-const handleCTAClick = () => {
-  console.log('Join Eclipse-QSOS clicked')
 }
 </script>

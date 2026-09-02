@@ -145,6 +145,15 @@
   background-color: var(--brand-strong);
 }
 
+.header-actions .cta-button.button {
+  background-color: var(--brand);
+  color: var(--brand-foreground);
+}
+
+.header-actions .cta-button.button:hover {
+  background-color: var(--brand-strong);
+}
+
 /* ========================================
    Mobile Menu (MobileMenu.vue)
    ======================================== */
@@ -192,6 +201,15 @@
   .nav-menu {
     gap: var(--spacing-2xl);
   }
+
+  .header-actions > .cta-button,
+  .header-actions > .cta-button.button {
+    display: none !important;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
@@ -208,8 +226,9 @@
     gap: var(--spacing-sm);
   }
 
-  .header-actions .cta-button {
-    display: none;
+  .header-actions > .cta-button,
+  .header-actions > .cta-button.button {
+    display: none !important;
   }
 
   .mobile-menu-button {
@@ -304,4 +323,13 @@
 .mobile-cta {
   margin: var(--spacing-2xl);
   width: calc(100% - var(--spacing-5xl));
+}
+
+.mobile-cta.button {
+  background-color: var(--brand);
+  color: var(--brand-foreground);
+}
+
+.mobile-cta.button:hover {
+  background-color: var(--brand-strong);
 }

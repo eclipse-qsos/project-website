@@ -12,7 +12,7 @@
     "badge": "Méthode ouverte · Fondation Eclipse",
     "title": "Qualifiez et sélectionnez vos logiciels open source avec",
     "titleAccent": "méthode et structure",
-    "description": "QSOS est une méthodologie libre et ouverte pour décrire, évaluer et comparer des logiciels open source afin de rendre les décisions transparentes, auditables, documentées et reproductibles.",
+    "description": "Eclipse-QSOS est une méthodologie libre et ouverte pour décrire, évaluer et comparer des logiciels open source afin de rendre les décisions transparentes, auditables, documentées et reproductibles.",
     "cta": {
       "join": "Rejoindre & Contribuer",
       "method": "Voir la méthode"
@@ -144,7 +144,7 @@
     }
   },
   "footer": {
-    "description": "QSOS — Qualification et Sélection de Logiciels Open Source.",
+    "description": "Eclipse-QSOS — Qualification et Sélection de Logiciels Open Source.",
     "links": {
       "eclipse": "Projet Eclipse",
       "ccBysa": "CC BY-SA 4.0",

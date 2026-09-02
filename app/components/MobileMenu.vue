@@ -31,21 +31,29 @@
     <nav class="mobile-menu" :class="{ active: isOpen }">
       <ul class="mobile-nav-menu">
         <li>
-          <a href="#method" @click="handleNavClick">Method</a>
+          <a href="#method" @click="handleNavClick">{{ $t('header.nav.method') }}</a>
         </li>
         <li>
-          <a href="#maturity" @click="handleNavClick">Maturity</a>
+          <a href="#maturity" @click="handleNavClick">{{ $t('header.nav.maturity') }}</a>
         </li>
         <li>
-          <a href="#why" @click="handleNavClick">Why</a>
+          <a href="#why" @click="handleNavClick">{{ $t('header.nav.why') }}</a>
         </li>
         <li>
-          <a href="#roadmap" @click="handleNavClick">Roadmap</a>
+          <a href="#roadmap" @click="handleNavClick">{{ $t('header.nav.roadmap') }}</a>
         </li>
       </ul>
-      <button class="cta-button mobile-cta" @click="handleCTAClick">
-        Join Eclipse-QSOS
-      </button>
+      <Button
+        href="https://projects.eclipse.org/projects/technology.qsos"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="primary"
+        size="md"
+        class="cta-button mobile-cta"
+        @click="handleCTAClick"
+      >
+        {{ $t('header.cta') }}
+      </Button>
     </nav>
   </div>
 </template>
@@ -64,7 +72,6 @@ const handleNavClick = (event: Event) => {
 }
 
 const handleCTAClick = () => {
-  console.log('Join Eclipse-QSOS clicked')
   isOpen.value = false
 }
 
