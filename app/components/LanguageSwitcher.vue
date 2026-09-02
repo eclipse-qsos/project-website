@@ -13,15 +13,15 @@
 <template>
   <div class="language-switcher">
     <button
-      :class="{ active: currentLang === 'en' }"
-      @click="currentLang = 'en'"
+      :class="{ active: locale === 'en' }"
+      @click="setLocale('en')"
       aria-label="Switch to English"
     >
       EN
     </button>
     <button
-      :class="{ active: currentLang === 'fr' }"
-      @click="currentLang = 'fr'"
+      :class="{ active: locale === 'fr' }"
+      @click="setLocale('fr')"
       aria-label="Switch to French"
     >
       FR
@@ -30,5 +30,7 @@
 </template>
 
 <script setup lang="ts">
-const currentLang = ref<'en' | 'fr'>('en')
+import { useI18n } from 'vue-i18n'
+
+const { locale, setLocale } = useI18n()
 </script>

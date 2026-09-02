@@ -16,19 +16,17 @@
       <div class="why-open-card">
         <!-- Badge -->
         <div class="why-open-badge">
-          <Badge variant="outline">Why open</Badge>
+          <Badge variant="outline">{{ $t('why.badge') }}</Badge>
         </div>
 
         <!-- Title -->
         <h2 class="why-open-title">
-          A method that evaluates open source must itself be open.
+          {{ $t('why.title') }}
         </h2>
 
         <!-- Description -->
         <p class="why-open-description">
-          OSS governance cannot be credibly outsourced to proprietary analysts. The community that produces open
-          source should also own the tools that assess it, distributed under a free licence to guarantee reuse, objectivity
-          and peer-reviewed improvement.
+          {{ $t('why.description') }}
         </p>
       </div>
     </div>

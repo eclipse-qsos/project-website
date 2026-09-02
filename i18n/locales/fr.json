@@ -1,0 +1,156 @@
+{
+  "header": {
+    "nav": {
+      "method": "Méthode",
+      "maturity": "Maturité",
+      "why": "Pourquoi",
+      "roadmap": "Feuille de route"
+    },
+    "cta": "Rejoindre Eclipse-QSOS"
+  },
+  "hero": {
+    "badge": "Méthode ouverte · Fondation Eclipse",
+    "title": "Qualifiez et sélectionnez vos logiciels open source avec",
+    "titleAccent": "méthode et structure",
+    "description": "QSOS est une méthodologie libre et ouverte pour décrire, évaluer et comparer des logiciels open source afin de rendre les décisions transparentes, auditables, documentées et reproductibles.",
+    "cta": {
+      "join": "Rejoindre & Contribuer",
+      "method": "Voir la méthode"
+    },
+    "metadata": {
+      "artifacts": "artefacts",
+      "tooling": "outillage",
+      "governance": "gouvernance"
+    },
+    "metrics": {
+      "steps": "Étapes du processus",
+      "criteria": "Critères de maturité",
+      "scale": "Échelle de notation",
+      "version": "Méthode actuelle"
+    }
+  },
+  "method": {
+    "badge": "La Méthode",
+    "title": "Quatre étapes, un processus reproductible",
+    "description": "Chaque étape produit des artefacts réutilisables, afin que les évaluations puissent être partagées, challengées et mises à jour dans le temps au lieu d'être reconstruites à partir de zéro.",
+    "step": "Étape {number}",
+    "steps": {
+      "define": {
+        "title": "Définir",
+        "description": "Cadrer les données de référence : familles de logiciels, grilles d'évaluation et critères pertinents pour votre contexte."
+      },
+      "evaluate": {
+        "title": "Évaluer",
+        "description": "Noter chaque candidat selon des critères de maturité et fonctionnels sur une échelle simple et auditable de 0 à 2."
+      },
+      "qualify": {
+        "title": "Qualifier",
+        "description": "Pondérer les critères selon vos propres exigences, contraintes et appétence au risque."
+      },
+      "select": {
+        "title": "Sélectionner",
+        "description": "Comparer les résultats pondérés côte à côte et documenter une décision reproductible par tous."
+      }
+    }
+  },
+  "maturity": {
+    "badge": "Méthode 2.0",
+    "title": "Critères de maturité",
+    "criteria": {
+      "legacy": {
+        "title": "Héritage",
+        "description": "Histoire et patrimoine du projet",
+        "topics": ["Âge", "Historique", "Équipe principale", "Popularité"]
+      },
+      "activity": {
+        "title": "Activité",
+        "description": "Activité au sein et autour du projet",
+        "topics": ["Communauté contributrice", "Activité sur les bugs", "Activité sur les fonctionnalités", "Activité sur les versions"]
+      },
+      "governance": {
+        "title": "Gouvernance",
+        "description": "Stratégie du projet",
+        "topics": ["Détenteurs des droits", "Feuille de route", "Gestion de projet", "Mode de distribution"]
+      },
+      "industrialization": {
+        "title": "Industrialisation",
+        "description": "Niveau d'industrialisation du projet",
+        "topics": ["Services", "Documentation", "Assurance qualité", "Modification du code source"]
+      }
+    }
+  },
+  "value": {
+    "badge": "Ce que vous en retirez",
+    "title": "Pourquoi QSOS fait la différence",
+    "cards": {
+      "defensibility": {
+        "title": "Défendabilité",
+        "description": "Artefacts notés qui résistent à l'audit. Justifiez vos choix avec des évaluations fondées sur des preuves."
+      },
+      "reusability": {
+        "title": "Réutilisabilité",
+        "description": "Les évaluations CC-BY-SA 4.0 circulent entre les équipes. Partagez les connaissances au lieu de dupliquer le travail."
+      },
+      "auditability": {
+        "title": "Auditabilité",
+        "description": "Processus transparent et reproductible. Chaque score est traçable et vérifiable."
+      },
+      "flossDepth": {
+        "title": "Profondeur FLOSS",
+        "description": "Axes de maturité que les outils génériques ignorent. Évaluez ce qui compte vraiment pour la pérennité de l'open source."
+      },
+      "mutualization": {
+        "title": "Mutualisation",
+        "description": "Partagez la charge de travail entre projets. Construisez sur les évaluations communautaires et contribuez en retour."
+      },
+      "contextWeighted": {
+        "title": "Pondération contextuelle",
+        "description": "Même logiciel, contextes différents, scores différents. Adaptez les évaluations à vos contraintes et priorités."
+      }
+    }
+  },
+  "why": {
+    "badge": "Pourquoi ouvert",
+    "title": "Une méthode qui évalue l'open source doit elle-même être ouverte.",
+    "description": "La gouvernance OSS ne peut être crédiblement externalisée à des analystes propriétaires. La communauté qui produit l'open source devrait également posséder les outils qui l'évaluent, distribués sous licence libre pour garantir la réutilisation, l'objectivité et l'amélioration par les pairs."
+  },
+  "roadmap": {
+    "title": "Où va QSOS.",
+    "phases": {
+      "legacy": {
+        "title": "Héritage",
+        "description": "Outils éparpillés, grilles XML, usage fragmenté."
+      },
+      "reboot": {
+        "title": "Reboot",
+        "description": "Application web moderne unique (TypeScript / Nuxt)."
+      },
+      "eclipse": {
+        "title": "Eclipse",
+        "description": "Ancré dans la Fondation Eclipse pour la gouvernance."
+      },
+      "qsos-agent": {
+        "title": "Agent QSOS",
+        "description": "Augmentation GenAI & MCP pour une évaluation assistée."
+      }
+    }
+  },
+  "cta": {
+    "title": "Rejoignez et contribuez à Eclipse-QSOS.",
+    "description": "Aidez à construire le standard ouvert pour qualifier les logiciels open source.",
+    "buttons": {
+      "primary": "Rejoindre le projet",
+      "secondary": "Contribuer sur GitHub"
+    }
+  },
+  "footer": {
+    "description": "QSOS — Qualification et Sélection de Logiciels Open Source.",
+    "links": {
+      "eclipse": "Projet Eclipse",
+      "ccBysa": "CC BY-SA 4.0",
+      "apache": "Apache-2.0"
+    },
+    "copyright": "© 2026 · Méthode CC BY-SA 4.0 · Outillage Apache-2.0"
+  }
+}
+

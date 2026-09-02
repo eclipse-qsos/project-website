@@ -20,16 +20,16 @@
       <nav class="header-nav">
         <ul class="nav-menu">
           <li>
-            <a href="#method" @click.prevent="scrollToSection('method')">Method</a>
+            <a href="#method" @click.prevent="scrollToSection('method')">{{ $t('header.nav.method') }}</a>
           </li>
           <li>
-            <a href="#maturity" @click.prevent="scrollToSection('maturity')">Maturity</a>
+            <a href="#maturity" @click.prevent="scrollToSection('maturity')">{{ $t('header.nav.maturity') }}</a>
           </li>
           <li>
-            <a href="#why" @click.prevent="scrollToSection('why')">Why</a>
+            <a href="#why" @click.prevent="scrollToSection('why')">{{ $t('header.nav.why') }}</a>
           </li>
           <li>
-            <a href="#roadmap" @click.prevent="scrollToSection('roadmap')">Roadmap</a>
+            <a href="#roadmap" @click.prevent="scrollToSection('roadmap')">{{ $t('header.nav.roadmap') }}</a>
           </li>
         </ul>
       </nav>
@@ -38,7 +38,7 @@
         <LanguageSwitcher />
         <ThemeSwitcher />
         <button class="cta-button" @click="handleCTAClick">
-          Join Eclipse-QSOS
+          {{ $t('header.cta') }}
         </button>
         <MobileMenu />
       </div>

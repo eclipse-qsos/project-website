@@ -15,7 +15,7 @@
     <div class="footer-container">
       <!-- Project Description -->
       <p class="footer-description">
-        QSOS — Qualification and Selection of Open Source Software.
+        {{ $t('footer.description') }}
       </p>
 
       <!-- Links -->
@@ -26,7 +26,7 @@
           rel="noopener noreferrer"
           class="footer-link"
         >
-          Eclipse project
+          {{ $t('footer.links.eclipse') }}
         </a>
         <a
           href="https://creativecommons.org/licenses/by-sa/4.0/"
@@ -48,7 +48,7 @@
 
       <!-- Copyright and Licensing -->
       <p class="footer-copyright">
-        © 2026 · Method CC BY-SA 4.0 · Tooling Apache-2.0
+        {{ $t('footer.copyright') }}
       </p>
     </div>
   </footer>

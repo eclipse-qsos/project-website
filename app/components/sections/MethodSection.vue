@@ -15,18 +15,17 @@
     <div class="method-container">
       <!-- Badge -->
       <div class="method-badge">
-        <Badge variant="outline">The Method</Badge>
+        <Badge variant="outline">{{ $t('method.badge') }}</Badge>
       </div>
 
       <!-- Title -->
       <h2 class="method-title">
-        Four steps, one repeatable process
+        {{ $t('method.title') }}
       </h2>
 
       <!-- Description -->
       <p class="method-description">
-        Each step produces reusable artefacts, so evaluations can be shared, challenged
-        and updated over time instead of being rebuilt from scratch.
+        {{ $t('method.description') }}
       </p>
 
       <!-- Method Steps Cards -->
@@ -36,7 +35,7 @@
           :key="step.number"
           :id="step.id"
           :variant="'step'"
-          :label="`Step ${step.number}`"
+          :label="$t('method.step', { number: step.number })"
           :title="step.title"
           :description="step.description"
           :color="step.color"
@@ -47,36 +46,38 @@
 </template>
 
 <script setup lang="ts">
-const methodSteps = [
+const { t } = useI18n()
+
+const methodSteps = computed(() => [
   {
     id: 'define',
     number: 1,
-    title: 'Define',
-    description: 'Frame the reference data: software families, evaluation grids and the criteria that matter for your context.',
+    title: t('method.steps.define.title'),
+    description: t('method.steps.define.description'),
     color: 'var(--color-define)',
   },
   {
     id: 'evaluate',
     number: 2,
-    title: 'Evaluate',
-    description: 'Score each candidate against maturity and functional criteria on a simple, auditable 0–1–2 scale.',
+    title: t('method.steps.evaluate.title'),
+    description: t('method.steps.evaluate.description'),
     color: 'var(--color-evaluate)',
   },
   {
     id: 'qualify',
     number: 3,
-    title: 'Qualify',
-    description: 'Weight the criteria according to your own requirements, constraints and risk appetite.',
+    title: t('method.steps.qualify.title'),
+    description: t('method.steps.qualify.description'),
     color: 'var(--color-qualify)',
   },
   {
     id: 'select',
     number: 4,
-    title: 'Select',
-    description: 'Compare weighted results side by side and document a decision anyone can reproduce.',
+    title: t('method.steps.select.title'),
+    description: t('method.steps.select.description'),
     color: 'var(--color-select)',
   },
-]
+])
 </script>
 
 <style scoped>

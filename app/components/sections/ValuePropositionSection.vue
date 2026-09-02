@@ -15,12 +15,12 @@
     <div class="value-container">
       <!-- Badge -->
       <div class="value-badge">
-        <Badge variant="outline">What you get out of it</Badge>
+        <Badge variant="outline">{{ $t('value.badge') }}</Badge>
       </div>
 
       <!-- Title -->
       <h2 class="value-title">
-        Why QSOS makes a difference
+        {{ $t('value.title') }}
       </h2>
 
       <!-- Value Proposition Cards -->
@@ -39,38 +39,40 @@
 </template>
 
 <script setup lang="ts">
-const valuePropositions = [
+const { t } = useI18n()
+
+const valuePropositions = computed(() => [
   {
     id: 'defensibility',
-    title: 'Defensibility',
-    description: 'Scored artefacts that survive audit. Justify your choices with evidence-backed evaluations.',
+    title: t('value.cards.defensibility.title'),
+    description: t('value.cards.defensibility.description'),
   },
   {
     id: 'reusability',
-    title: 'Reusability',
-    description: 'CC-BY-SA 4.0 evaluations travel between teams. Share knowledge instead of duplicating work.',
+    title: t('value.cards.reusability.title'),
+    description: t('value.cards.reusability.description'),
   },
   {
     id: 'auditability',
-    title: 'Auditability',
-    description: 'Transparent and reproducible process. Every score is traceable and verifiable.',
+    title: t('value.cards.auditability.title'),
+    description: t('value.cards.auditability.description'),
   },
   {
     id: 'floss-depth',
-    title: 'FLOSS depth',
-    description: 'Maturity axes generic tools ignore. Evaluate what really matters for open source sustainability.',
+    title: t('value.cards.flossDepth.title'),
+    description: t('value.cards.flossDepth.description'),
   },
   {
     id: 'mutualization',
-    title: 'Mutualization',
-    description: 'Share the workload across projects. Build on community evaluations and contribute back.',
+    title: t('value.cards.mutualization.title'),
+    description: t('value.cards.mutualization.description'),
   },
   {
-    id: 'context-weighted',
-    title: 'Context-weighted',
-    description: 'Same software, different contexts, different scores. Adapt evaluations to your constraints and priorities.',
+    id: 'contexte-weighted',
+    title: t('value.cards.contextWeighted.title'),
+    description: t('value.cards.contextWeighted.description'),
   },
-]
+])
 </script>
 
 <style scoped>

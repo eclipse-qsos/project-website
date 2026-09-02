@@ -15,18 +15,18 @@
     <div class="hero-container">
       <!-- Badge -->
       <div class="hero-badge">
-        <Badge variant="outline">Open method · Eclipse Foundation</Badge>
+        <Badge variant="outline">{{ $t('hero.badge') }}</Badge>
       </div>
 
       <!-- Headline -->
       <h1 class="hero-title">
-        Qualify and select your open source software with
-        <span class="hero-title-accent">method and structure</span>
+        {{ $t('hero.title') }}
+        <span class="hero-title-accent">{{ $t('hero.titleAccent') }}</span>
       </h1>
 
       <!-- Description -->
       <p class="hero-description">
-        QSOS is a free and open methodology to describe, evaluate and compare open source software in order to make decisions transparent, auditable, documented and reproductible.
+        {{ $t('hero.description') }}
       </p>
 
       <!-- CTAs -->
@@ -38,10 +38,10 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Join & Contribute
+          {{ $t('hero.cta.join') }}
         </Button>
         <Button variant="secondary" size="lg" href="#method">
-          See the Method
+          {{ $t('hero.cta.method') }}
         </Button>
       </div>
 
@@ -50,15 +50,15 @@
         <ul class="hero-metadata">
           <li>
             <Icon name="lucide:file-text" />
-            <span>CC BY-SA 4.0 artefacts</span>
+            <span>CC BY-SA 4.0 {{ $t('hero.metadata.artifacts') }}</span>
           </li>
           <li>
             <Icon name="lucide:code" />
-            <span>Apache-2.0 tooling</span>
+            <span>Apache-2.0 {{ $t('hero.metadata.tooling') }}</span>
           </li>
           <li>
             <Icon name="lucide:shield-check" />
-            <span>Eclipse-governed</span>
+            <span>Eclipse {{ $t('hero.metadata.governance') }}</span>
           </li>
         </ul>
 
@@ -75,12 +75,14 @@
 </template>
 
 <script setup lang="ts">
-const keyMetrics = [
-  { value: '4', label: 'Process steps' },
-  { value: '16', label: 'Maturity criteria' },
-  { value: '0 - 2', label: 'Scoring scale' },
-  { value: '2.0', label: 'Current method' },
-]
+const { t } = useI18n()
+
+const keyMetrics = computed(() => [
+  { value: '4', label: t('hero.metrics.steps') },
+  { value: '16', label: t('hero.metrics.criteria') },
+  { value: '0 - 2', label: t('hero.metrics.scale') },
+  { value: '2.0', label: t('hero.metrics.version') },
+])
 </script>
 
 <style scoped>

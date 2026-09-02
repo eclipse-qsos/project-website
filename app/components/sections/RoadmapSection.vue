@@ -15,7 +15,7 @@
     <div class="roadmap-container">
       <!-- Title -->
       <h2 class="roadmap-title">
-        Where QSOS is going.
+        {{ $t('roadmap.title') }}
       </h2>
 
       <!-- Timeline -->
@@ -43,28 +43,30 @@
 </template>
 
 <script setup lang="ts">
-const roadmapPhases = [
+const { t } = useI18n()
+
+const roadmapPhases = computed(() => [
   {
     id: 'legacy',
-    title: 'Legacy',
-    description: 'Scattered tools, XML grids, fragmented usage.',
+    title: t('roadmap.phases.legacy.title'),
+    description: t('roadmap.phases.legacy.description'),
   },
   {
     id: 'reboot',
-    title: 'Reboot',
-    description: 'Single modern web app (TypeScript / Nuxt).',
+    title: t('roadmap.phases.reboot.title'),
+    description: t('roadmap.phases.reboot.description'),
   },
   {
     id: 'eclipse',
-    title: 'Eclipse',
-    description: 'Anchored in the Eclipse Foundation for governance.',
+    title: t('roadmap.phases.eclipse.title'),
+    description: t('roadmap.phases.eclipse.description'),
   },
   {
     id: 'qsos-agent',
-    title: 'QSOS Agent',
-    description: 'GenAI & MCP augmentation for assisted evaluation.',
+    title: t('roadmap.phases.qsos-agent.title'),
+    description: t('roadmap.phases.qsos-agent.description'),
   },
-]
+])
 </script>
 
 <style scoped>

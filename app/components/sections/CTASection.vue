@@ -16,12 +16,12 @@
       <div class="cta-card">
         <!-- Headline -->
         <h2 class="cta-headline">
-          Join and contribute to Eclipse-QSOS.
+          {{ $t('cta.title') }}
         </h2>
 
         <!-- Supporting Text -->
         <p class="cta-text">
-          Help build the open standard for qualifying open source software.
+          {{ $t('cta.description') }}
         </p>
 
         <!-- CTA Buttons -->
@@ -33,7 +33,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Join the project
+            {{ $t('cta.buttons.primary') }}
           </Button>
           <Button
             variant="outline"
@@ -42,7 +42,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contribute on GitHub
+            {{ $t('cta.buttons.secondary') }}
           </Button>
         </div>
       </div>

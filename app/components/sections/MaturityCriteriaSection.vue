@@ -15,12 +15,12 @@
     <div class="maturity-container">
       <!-- Badge -->
       <div class="maturity-badge">
-        <Badge variant="outline">2.0 method</Badge>
+        <Badge variant="outline">{{ $t('maturity.badge') }}</Badge>
       </div>
 
       <!-- Title -->
       <h2 class="maturity-title">
-        Maturity criteria
+        {{ $t('maturity.title') }}
       </h2>
 
       <!-- Criteria Cards -->
@@ -40,47 +40,35 @@
 </template>
 
 <script setup lang="ts">
-const maturityCriteria = [
+const { t, tm, rt } = useI18n()  
+
+const maturityCriteria = computed(() => [
   {
     id: 'legacy',
-    title: 'Legacy',
-    description: "Project's history and heritage",
-    topics: ['Age', 'History', 'Core team', 'Popularity'],
+    title: t('maturity.criteria.legacy.title'),
+    description: t('maturity.criteria.legacy.description'),
+    topics: (tm('maturity.criteria.legacy.topics') as any[]).map(topic => rt(topic)),
   },
   {
     id: 'activity',
-    title: 'Activity',
-    description: 'Activity inside and around the project',
-    topics: [
-      'Contributing community',
-      'Activity on bugs',
-      'Activity on functionalities',
-      'Activity on releases/versions',
-    ],
+    title: t('maturity.criteria.activity.title'),
+    description: t('maturity.criteria.activity.description'),
+    topics: (tm('maturity.criteria.activity.topics') as any[]).map(topic => rt(topic)),
   },
   {
     id: 'governance',
-    title: 'Governance',
-    description: "Project's strategy",
-    topics: [
-      'Copyright holders',
-      'Roadmap',
-      'Project management',
-      'Distribution mode',
-    ],
+    title: t('maturity.criteria.governance.title'),
+    description: t('maturity.criteria.governance.description'),
+    topics: (tm('maturity.criteria.governance.topics') as any[]).map(topic => rt(topic)),
   },
   {
     id: 'industrialization',
-    title: 'Industrialization',
-    description: 'Industrialization level of the project',
-    topics: [
-      'Services',
-      'Documentation',
-      'Quality assurance',
-      'Source code modification',
-    ],
+    title: t('maturity.criteria.industrialization.title'),
+    description: t('maturity.criteria.industrialization.description'),
+    topics: (tm('maturity.criteria.industrialization.topics') as any[]).map(topic => rt(topic)),
   },
-]
+])
+
 </script>
 
 <style scoped>

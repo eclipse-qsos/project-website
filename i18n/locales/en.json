@@ -1,0 +1,155 @@
+{
+  "header": {
+    "nav": {
+      "method": "Method",
+      "maturity": "Maturity",
+      "why": "Why",
+      "roadmap": "Roadmap"
+    },
+    "cta": "Join Eclipse-QSOS"
+  },
+  "hero": {
+    "badge": "Open method · Eclipse Foundation",
+    "title": "Qualify and select your open source software with",
+    "titleAccent": "method and structure",
+    "description": "QSOS is a free and open methodology to describe, evaluate and compare open source software in order to make decisions transparent, auditable, documented and reproducible.",
+    "cta": {
+      "join": "Join & Contribute",
+      "method": "See the Method"
+    },
+    "metadata": {
+      "artifacts": "artefacts",
+      "tooling": "tooling",
+      "governance": "governed"
+    },
+    "metrics": {
+      "steps": "Process steps",
+      "criteria": "Maturity criteria",
+      "scale": "Scoring scale",
+      "version": "Current method"
+    }
+  },
+  "method": {
+    "badge": "The Method",
+    "title": "Four steps, one repeatable process",
+    "description": "Each step produces reusable artefacts, so evaluations can be shared, challenged and updated over time instead of being rebuilt from scratch.",
+    "step": "Step {number}",
+    "steps": {
+      "define": {
+        "title": "Define",
+        "description": "Frame the reference data: software families, evaluation grids and the criteria that matter for your context."
+      },
+      "evaluate": {
+        "title": "Evaluate",
+        "description": "Score each candidate against maturity and functional criteria on a simple, auditable 0–1–2 scale."
+      },
+      "qualify": {
+        "title": "Qualify",
+        "description": "Weight the criteria according to your own requirements, constraints and risk appetite."
+      },
+      "select": {
+        "title": "Select",
+        "description": "Compare weighted results side by side and document a decision anyone can reproduce."
+      }
+    }
+  },
+  "maturity": {
+    "badge": "2.0 method",
+    "title": "Maturity criteria",
+    "criteria": {
+      "legacy": {
+        "title": "Legacy",
+        "description": "Project's history and heritage",
+        "topics": ["Age", "History", "Core team", "Popularity"]
+      },
+      "activity": {
+        "title": "Activity",
+        "description": "Activity inside and around the project",
+        "topics": ["Contributing community", "Activity on bugs", "Activity on functionalities", "Activity on releases/versions"]
+      },
+      "governance": {
+        "title": "Governance",
+        "description": "Project's strategy",
+        "topics": ["Copyright holders", "Roadmap", "Project management", "Distribution mode"]
+      },
+      "industrialization": {
+        "title": "Industrialization",
+        "description": "Industrialization level of the project",
+        "topics": ["Services", "Documentation", "Quality assurance", "Source code modification"]
+      }
+    }
+  },
+  "value": {
+    "badge": "What you get out of it",
+    "title": "Why QSOS makes a difference",
+    "cards": {
+      "defensibility": {
+        "title": "Defensibility",
+        "description": "Scored artefacts that survive audit. Justify your choices with evidence-backed evaluations."
+      },
+      "reusability": {
+        "title": "Reusability",
+        "description": "CC-BY-SA 4.0 evaluations travel between teams. Share knowledge instead of duplicating work."
+      },
+      "auditability": {
+        "title": "Auditability",
+        "description": "Transparent and reproducible process. Every score is traceable and verifiable."
+      },
+      "flossDepth": {
+        "title": "FLOSS depth",
+        "description": "Maturity axes generic tools ignore. Evaluate what really matters for open source sustainability."
+      },
+      "mutualization": {
+        "title": "Mutualization",
+        "description": "Share the workload across projects. Build on community evaluations and contribute back."
+      },
+      "contextWeighted": {
+        "title": "Context-weighted",
+        "description": "Same software, different contexts, different scores. Adapt evaluations to your constraints and priorities."
+      }
+    }
+  },
+  "why": {
+    "badge": "Why open",
+    "title": "A method that evaluates open source must itself be open.",
+    "description": "OSS governance cannot be credibly outsourced to proprietary analysts. The community that produces open source should also own the tools that assess it, distributed under a free licence to guarantee reuse, objectivity and peer-reviewed improvement."
+  },
+  "roadmap": {
+    "title": "Where QSOS is going.",
+    "phases": {
+      "legacy": {
+        "title": "Legacy",
+        "description": "Scattered tools, XML grids, fragmented usage."
+      },
+      "reboot": {
+        "title": "Reboot",
+        "description": "Single modern web app (TypeScript / Nuxt)."
+      },
+      "eclipse": {
+        "title": "Eclipse",
+        "description": "Anchored in the Eclipse Foundation for governance."
+      },
+      "qsos-agent": {
+        "title": "QSOS Agent",
+        "description": "GenAI & MCP augmentation for assisted evaluation."
+      }
+    }
+  },
+  "cta": {
+    "title": "Join and contribute to Eclipse-QSOS.",
+    "description": "Help build the open standard for qualifying open source software.",
+    "buttons": {
+      "primary": "Join the project",
+      "secondary": "Contribute on GitHub"
+    }
+  },
+  "footer": {
+    "description": "QSOS — Qualification and Selection of Open Source Software.",
+    "links": {
+      "eclipse": "Eclipse project",
+      "ccBysa": "CC BY-SA 4.0",
+      "apache": "Apache-2.0"
+    },
+    "copyright": "© 2026 · Method CC BY-SA 4.0 · Tooling Apache-2.0"
+  }
+}
