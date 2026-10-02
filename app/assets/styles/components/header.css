@@ -49,10 +49,17 @@
 .header-nav {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
+/* Equal-width columns: item positions don't depend on label length (i18n) */
 .nav-menu {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  align-items: center;
+  flex: 1;
+  text-align: center;
   list-style: none;
   gap: var(--spacing-6xl);
   margin: 0;
@@ -64,7 +71,6 @@
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.2s ease;
-  white-space: nowrap;
 }
 
 .nav-menu a:hover {
@@ -81,6 +87,11 @@
   gap: var(--spacing-md);
   flex-shrink: 0;
   margin-left: auto;
+}
+
+/* Fixed width (fits the longest translation) so the switchers don't move */
+.header-actions > .cta-button {
+  min-width: 14.5em;
 }
 
 /* LanguageSwitcher Component */
