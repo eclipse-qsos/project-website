@@ -31,8 +31,9 @@ export default defineNuxtConfig({
   ],
 
   app: {
+    // Deployment path, set at build time: NUXT_APP_BASE_URL=/qsos/ npm run generate (defaults to /)
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
-      baseUrl: '/qsos/',
       title: 'Eclipse QSOS',
       meta: [
         { charset: 'utf-8' },
