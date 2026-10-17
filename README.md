@@ -73,3 +73,17 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+### Deploying under a sub-path
+
+By default the site is built to be served from the domain root (`/`). To serve it from a sub-path, set `NUXT_APP_BASE_URL` when generating (leading and trailing slashes required):
+
+```bash
+# served at https://example.org/
+npm run generate
+
+# served at https://example.org/qsos/
+NUXT_APP_BASE_URL=/qsos/ npm run generate
+```
+
+Then upload the contents of `.output/public` to that location.
