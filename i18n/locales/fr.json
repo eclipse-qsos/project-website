@@ -6,13 +6,13 @@
       "why": "Pourquoi",
       "roadmap": "Feuille de route"
     },
-    "cta": "Rejoindre Eclipse-QSOS"
+    "cta": "Rejoindre Eclipse QSOS"
   },
   "hero": {
     "badge": "Méthode ouverte · Fondation Eclipse",
     "title": "Qualifiez et sélectionnez vos logiciels open source avec",
     "titleAccent": "méthode et structure",
-    "description": "Eclipse-QSOS est une méthodologie libre et ouverte pour décrire, évaluer et comparer des logiciels open source afin de rendre les décisions transparentes, auditables, documentées et reproductibles.",
+    "description": "Eclipse QSOS est une méthodologie libre et ouverte pour décrire, évaluer et comparer des logiciels open source afin de rendre les décisions transparentes, auditables, documentées et reproductibles.",
     "cta": {
       "join": "Rejoindre & Contribuer",
       "method": "Voir la méthode"
@@ -136,7 +136,7 @@
     }
   },
   "cta": {
-    "title": "Rejoignez et contribuez à Eclipse-QSOS.",
+    "title": "Rejoignez et contribuez à Eclipse QSOS.",
     "description": "Aidez à construire le standard ouvert pour qualifier les logiciels open source.",
     "buttons": {
       "primary": "Rejoindre le projet",
@@ -144,7 +144,7 @@
     }
   },
   "footer": {
-    "description": "Eclipse-QSOS — Qualification et Sélection de Logiciels Open Source.",
+    "description": "Eclipse QSOS — Qualification et Sélection de Logiciels Open Source.",
     "links": {
       "eclipse": "Projet Eclipse",
       "ccBysa": "CC BY-SA 4.0",
