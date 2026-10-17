@@ -144,13 +144,25 @@
     }
   },
   "footer": {
-    "description": "Eclipse QSOS — Qualification et Sélection de Logiciels Open Source.",
+    "description": "{project} — Qualification et Sélection de Logiciels Open Source.",
+    "logoAlt": "Eclipse Foundation",
+    "groups": {
+      "foundation": "Eclipse Foundation",
+      "legal": "Mentions légales"
+    },
     "links": {
-      "eclipse": "Projet Eclipse",
+      "eclipseOrg": "Eclipse.org",
+      "codeOfConduct": "Code de conduite",
+      "vulnerability": "Signaler une vulnérabilité",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "compliance": "Conformité",
+      "legal": "Ressources juridiques",
       "ccBysa": "CC BY-SA 4.0",
       "apache": "Apache-2.0"
     },
-    "copyright": "© 2026 · Méthode CC BY-SA 4.0 · Outillage Apache-2.0"
+    "copyright": "Copyright © Contributors to the Eclipse Foundation · Méthode {ccBysa} · Outillage {apache}",
+    "trademark": "Eclipse QSOS et le logo QSOS sont des marques commerciales d'Eclipse Foundation AISBL."
   }
 }
 
