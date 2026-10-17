@@ -1,75 +1,54 @@
-# Nuxt Minimal Starter
+# Eclipse QSOS™ website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Source code of the website of [Eclipse QSOS](https://projects.eclipse.org/projects/technology.qsos) (Qualification and Selection of Open Source Software), an open methodology to describe, evaluate and compare open source software.
 
-## Setup
+The site is built with [Nuxt 4](https://nuxt.com/) (Vue 3, TypeScript) and is available in English and French.
 
-Make sure to install dependencies:
+## Prerequisites
 
-```bash
-# npm
-npm install
+- [Node.js](https://nodejs.org/) 22.19+ or 24.11+ (required by Nuxt 4)
+- npm (bundled with Node.js)
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Local development
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npm ci        # install dependencies from package-lock.json
+npm run dev   # start the dev server on http://localhost:3000 (French under /fr)
 ```
 
-## Production
-
-Build the application for production:
+## Build and deploy
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+npm run generate   # build the static site into .output/public/
+npm run preview    # preview the build locally
 ```
 
-Locally preview production build:
+Deploy the contents of `.output/public/` to any static web server.
 
-```bash
-# npm
-npm run preview
+## Content
 
-# pnpm
-pnpm preview
+All the text displayed on the site lives in the locale files:
 
-# yarn
-yarn preview
+- `i18n/locales/en.json` (English)
+- `i18n/locales/fr.json` (French)
 
-# bun
-bun run preview
-```
+When you add or change text, update both files so they keep the same keys.
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Contributing
+
+Contributions are made through GitHub pull requests against `main`. Before contributing:
+
+- sign the [Eclipse Contributor Agreement (ECA)](https://www.eclipse.org/legal/ECA.php) with the email address you use in your commits;
+- sign off every commit (`git commit -s`).
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## License
+
+This repository (code and content) is licensed under the [Apache License 2.0](LICENCE).
+
+The QSOS method itself is published under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and is not part of this repository.
+
+## Trademarks
+
+Eclipse QSOS and the QSOS logo are trademarks of Eclipse Foundation AISBL.
