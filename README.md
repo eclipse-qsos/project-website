@@ -25,6 +25,20 @@ npm run preview    # preview the build locally
 
 Deploy the contents of `.output/public/` to any static web server.
 
+### Deploying under a sub-path
+
+By default the site is built to be served from the domain root (`/`). To serve it from a sub-path, set `NUXT_APP_BASE_URL` when generating (leading and trailing slashes required):
+
+```bash
+# served at https://example.org/
+npm run generate
+
+# served at https://example.org/qsos/
+NUXT_APP_BASE_URL=/qsos/ npm run generate
+```
+
+Then upload the contents of `.output/public/` to that location.
+
 ## Content
 
 All the text displayed on the site lives in the locale files:
