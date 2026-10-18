@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "description": "QSOS - Qualification et Sélection de Logiciels Open Source"
+  },
   "header": {
     "nav": {
       "method": "Méthode",
