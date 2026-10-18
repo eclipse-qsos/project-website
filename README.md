@@ -16,6 +16,7 @@ npm ci        # install dependencies from package-lock.json
 npm run dev   # start the dev server on http://localhost:3000 (French under /fr)
 ```
 
+The examples use npm. pnpm, yarn and bun work too: replace `npm ci` with `pnpm install`, `yarn install` or `bun install`, and `npm run <script>` with `pnpm <script>`, `yarn <script>` or `bun run <script>`.
 ## Build and deploy
 
 ```bash
