@@ -9,13 +9,13 @@
       "why": "Why",
       "roadmap": "Roadmap"
     },
-    "cta": "Join Eclipse-QSOS"
+    "cta": "Join Eclipse QSOS"
   },
   "hero": {
     "badge": "Open method · Eclipse Foundation",
     "title": "Qualify and select your open source software with",
     "titleAccent": "method and structure",
-    "description": "Eclipse-QSOS is a free and open methodology to describe, evaluate and compare open source software in order to make decisions transparent, auditable, documented and reproducible.",
+    "description": "Eclipse QSOS™ is a free and open methodology to describe, evaluate and compare open source software in order to make decisions transparent, auditable, documented and reproducible.",
     "cta": {
       "join": "Join & Contribute",
       "method": "See the Method"
@@ -139,7 +139,7 @@
     }
   },
   "cta": {
-    "title": "Join and contribute to Eclipse-QSOS.",
+    "title": "Join and contribute to Eclipse QSOS.",
     "description": "Help build the open standard for qualifying open source software.",
     "buttons": {
       "primary": "Join the project",
@@ -147,12 +147,24 @@
     }
   },
   "footer": {
-    "description": "Eclipse-QSOS — Qualification and Selection of Open Source Software.",
+    "description": "{project} — Qualification and Selection of Open Source Software.",
+    "logoAlt": "Eclipse Foundation",
+    "groups": {
+      "foundation": "Eclipse Foundation",
+      "legal": "Legal"
+    },
     "links": {
-      "eclipse": "Eclipse project",
+      "eclipseOrg": "Eclipse.org",
+      "codeOfConduct": "Code of Conduct",
+      "vulnerability": "Report a Vulnerability",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "compliance": "Compliance",
+      "legal": "Legal Resources",
       "ccBysa": "CC BY-SA 4.0",
       "apache": "Apache-2.0"
     },
-    "copyright": "© 2026 · Method CC BY-SA 4.0 · Tooling Apache-2.0"
+    "copyright": "Copyright © Contributors to the Eclipse Foundation · Method {ccBysa} · Tooling {apache}",
+    "trademark": "Eclipse QSOS and the QSOS logo are trademarks of Eclipse Foundation AISBL."
   }
 }

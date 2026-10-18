@@ -65,11 +65,11 @@ export default defineNuxtConfig({
   app: {
     baseURL,
     head: {
-      title: 'Eclipse QSOS',
+      title: 'Eclipse QSOS™',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'QSOS - Qualification and Selection of Open Source Software' }
+        { name: 'description', content: 'Eclipse QSOS™ - Qualification and Selection of Open Source Software' }
       ],
       script: [
         { innerHTML: localeRedirectScript, tagPosition: 'head', tagPriority: 'critical' }
