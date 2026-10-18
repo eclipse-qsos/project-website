@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+// Deployment path, set at build time: NUXT_APP_BASE_URL=/qsos/ npm run generate (defaults to /)
+const baseURL = process.env.NUXT_APP_BASE_URL || '/'
+
 const defaultLocale = 'en'
 const localeCookie = 'i18n_redirected'
 const locales = [
@@ -14,7 +17,8 @@ const locales = [
 // This runs in <head> before anything renders, with the same precedence as
 // `detectBrowserLanguage`: saved cookie, then navigator.languages, then default.
 const localeRedirectScript = `(function () {
-  if (location.pathname !== '/') return
+  var base = ${JSON.stringify(baseURL)}
+  if (location.pathname !== base) return
   var codes = ${JSON.stringify(locales.map(l => l.code))}
   var match = document.cookie.match(/(?:^|; )${localeCookie}=([^;]*)/)
   var locale = match && codes.indexOf(match[1]) !== -1 ? match[1] : null
@@ -25,7 +29,7 @@ const localeRedirectScript = `(function () {
       if (codes.indexOf(code) !== -1) locale = code
     }
   }
-  if (locale && locale !== '${defaultLocale}') location.replace('/' + locale + '/' + location.search + location.hash)
+  if (locale && locale !== '${defaultLocale}') location.replace(base + locale + '/' + location.search + location.hash)
 })()`
 
 export default defineNuxtConfig({
@@ -59,15 +63,23 @@ export default defineNuxtConfig({
   ],
 
   app: {
+    baseURL,
     head: {
-      baseUrl: '/qsos/',
       title: 'Eclipse QSOS',
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'QSOS - Qualification and Selection of Open Source Software' }
       ],
       script: [
         { innerHTML: localeRedirectScript, tagPosition: 'head', tagPriority: 'critical' }
+      ],
+      // app.head links are not prefixed with baseURL, so do it here
+      link: [
+        { rel: 'icon', href: `${baseURL}favicon.ico`, sizes: '48x48' },
+        { rel: 'icon', href: `${baseURL}favicon.svg`, type: 'image/svg+xml' },
+        { rel: 'apple-touch-icon', href: `${baseURL}apple-touch-icon.png` },
+        { rel: 'manifest', href: `${baseURL}site.webmanifest` }
       ]
     }
   }
