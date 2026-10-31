@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="header-container">
       <a href="#" class="header-logo" @click.prevent="scrollToTop">
-        <img src="@/assets/images/logo-qsos-legacy.png" alt="Eclipse QSOS Logo" />
+        <img src="@/assets/images/logo-qsos-legacy.png" :alt="$t('header.logoAlt')" width="150" height="58" />
       </a>
 
       <nav class="header-nav">

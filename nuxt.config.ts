@@ -2,6 +2,8 @@
 
 // Deployment path, set at build time: NUXT_APP_BASE_URL=/qsos/ npm run generate (defaults to /)
 const baseURL = process.env.NUXT_APP_BASE_URL || '/'
+// Public origin, used for canonical, hreflang, Open Graph and JSON-LD URLs
+const siteUrl = 'https://qsos.org'
 
 const defaultLocale = 'en'
 const localeCookie = 'i18n_redirected'
@@ -39,7 +41,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/icon', '@nuxtjs/i18n'],
 
   i18n: {
-    baseUrl: 'https://qsos.org',
+    baseUrl: siteUrl,
     defaultLocale,
     strategy: 'prefix_except_default',
     trailingSlash: true,
@@ -50,6 +52,21 @@ export default defineNuxtConfig({
       cookieKey: localeCookie,
       redirectOn: 'root',
       alwaysRedirect: false
+    }
+  },
+
+  runtimeConfig: {
+    public: {
+      siteUrl,
+      defaultLocale,
+      locales: locales.map(l => l.code)
+    }
+  },
+
+  // Built from the locale files by server/routes/, written as static files by `generate`
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml', '/llms.txt', '/llms-full.txt', '/fr/llms-full.txt']
     }
   },
 
@@ -69,7 +86,10 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Eclipse QSOS™ - Qualification and Selection of Open Source Software' }
+        { name: 'description', content: 'Eclipse QSOS™ - Qualification and Selection of Open Source Software' },
+        // Browser UI colour, matching --surface in tokens.css
+        { name: 'theme-color', content: '#fafafa', media: '(prefers-color-scheme: light)' },
+        { name: 'theme-color', content: '#191b1c', media: '(prefers-color-scheme: dark)' }
       ],
       script: [
         { innerHTML: localeRedirectScript, tagPosition: 'head', tagPriority: 'critical' }
