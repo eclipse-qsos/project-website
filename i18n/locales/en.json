@@ -1,18 +1,33 @@
 {
   "meta": {
-    "description": "QSOS - Qualification and Selection of Open Source Software"
+    "title": "Eclipse QSOS™ – Qualification and Selection of Open Source Software",
+    "fullName": "Qualification and Selection of Open Source Software",
+    "description": "Eclipse QSOS™ is an open method to qualify, evaluate and compare open source software, making your selection decisions transparent, auditable and reproducible."
   },
   "header": {
+    "logoAlt": "Eclipse QSOS",
     "nav": {
       "method": "Method",
       "maturity": "Maturity",
       "why": "Why",
       "roadmap": "Roadmap"
     },
-    "cta": "Join Eclipse QSOS"
+    "cta": "Join Eclipse QSOS",
+    "language": {
+      "en": "Switch to English",
+      "fr": "Switch to French"
+    },
+    "theme": {
+      "dark": "Switch to dark mode",
+      "light": "Switch to light mode"
+    },
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu"
+    }
   },
   "hero": {
-    "badge": "Open method · Eclipse Foundation",
+    "badge": "Eclipse QSOS™ · Open method · Eclipse Foundation",
     "title": "Qualify and select your open source software with",
     "titleAccent": "method and structure",
     "description": "Eclipse QSOS™ is a free and open methodology to describe, evaluate and compare open source software in order to make decisions transparent, auditable, documented and reproducible.",
@@ -20,6 +35,7 @@
       "join": "Join & Contribute",
       "method": "See the Method"
     },
+    "glance": "Eclipse QSOS at a glance",
     "metadata": {
       "artifacts": "artefacts",
       "tooling": "tooling",
@@ -58,7 +74,7 @@
   },
   "maturity": {
     "badge": "2.0 method",
-    "title": "Maturity criteria",
+    "title": "Open source maturity criteria",
     "criteria": {
       "legacy": {
         "title": "Legacy",
@@ -118,7 +134,7 @@
     "description": "OSS governance cannot be credibly outsourced to proprietary analysts. The community that produces open source should also own the tools that assess it, distributed under a free licence to guarantee reuse, objectivity and peer-reviewed improvement."
   },
   "roadmap": {
-    "title": "Where QSOS is going.",
+    "title": "Roadmap: where QSOS is going.",
     "phases": {
       "legacy": {
         "title": "Legacy",
@@ -145,6 +161,11 @@
       "primary": "Join the project",
       "secondary": "Contribute on GitHub"
     }
+  },
+  "llms": {
+    "source": "Source: {page} (French version: {other})",
+    "facts": "{steps} process steps, {criteria} maturity criteria, scoring scale from 0 to 2, method version 2.0",
+    "summary": "Summary for LLMs"
   },
   "footer": {
     "description": "{project} — Qualification and Selection of Open Source Software.",

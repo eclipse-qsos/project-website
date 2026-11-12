@@ -15,14 +15,14 @@
     <button
       :class="{ active: locale === 'en' }"
       @click="setLocale('en')"
-      aria-label="Switch to English"
+      :aria-label="$t('header.language.en')"
     >
       EN
     </button>
     <button
       :class="{ active: locale === 'fr' }"
       @click="setLocale('fr')"
-      aria-label="Switch to French"
+      :aria-label="$t('header.language.fr')"
     >
       FR
     </button>

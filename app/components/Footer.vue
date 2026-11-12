@@ -23,11 +23,15 @@
           <img
             src="@/assets/images/eclipse-foundation-logo.svg"
             :alt="$t('footer.logoAlt')"
+            width="283"
+            height="91"
             class="footer-logo-img footer-logo-img--light"
           />
           <img
             src="@/assets/images/eclipse-foundation-logo-reversed.svg"
             :alt="$t('footer.logoAlt')"
+            width="282"
+            height="91"
             class="footer-logo-img footer-logo-img--dark"
           />
         </a>

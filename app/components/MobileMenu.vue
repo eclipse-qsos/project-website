@@ -15,7 +15,7 @@
     <button
       class="mobile-menu-button"
       @click="isOpen = !isOpen"
-      :aria-label="isOpen ? 'Close menu' : 'Open menu'"
+      :aria-label="isOpen ? $t('header.menu.close') : $t('header.menu.open')"
       :aria-expanded="isOpen"
     >
       <Icon v-if="!isOpen" name="lucide:menu" />

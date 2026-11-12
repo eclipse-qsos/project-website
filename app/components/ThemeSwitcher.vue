@@ -14,7 +14,7 @@
   <button
     class="theme-switcher"
     @click="toggleTheme"
-    :aria-label="theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
+    :aria-label="theme === 'light' ? $t('header.theme.dark') : $t('header.theme.light')"
   >
     <Icon v-if="theme === 'light'" name="lucide:moon" />
     <Icon v-else name="lucide:sun" />

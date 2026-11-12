@@ -6,7 +6,7 @@ Guidance for AI coding agents working in this repository.
 
 The landing page for **Eclipse QSOS** (Qualification and Selection of Open Source Software), an Eclipse Foundation project (`technology.qsos`). It is a single-page marketing/explainer site built with **Nuxt 4** (Vue 3, TypeScript, `<script setup>`). Upstream: `github.com/eclipse-qsos/project-website`.
 
-There is no backend, no API, no CMS. All copy lives in the i18n JSON files.
+There is no backend, no API, no CMS. All copy lives in the i18n JSON files. The only server code is a few Nitro routes in `server/` that `npm run generate` prerenders into static files (see SEO below).
 
 ## Commands
 
@@ -14,7 +14,7 @@ There is no backend, no API, no CMS. All copy lives in the i18n JSON files.
 npm ci             # install from package-lock.json; postinstall runs `nuxt prepare` (generates .nuxt/)
 npm run dev        # dev server on http://localhost:3000 (/ and /fr)
 npm run build      # Node server build into .output/ (run with `node .output/server/index.mjs`)
-npm run generate   # static site into .output/public/, prerenders / and /fr
+npm run generate   # static site into .output/public/, prerenders / and /fr, sitemap.xml and llms*.txt
 npm run preview    # serve the last build on http://localhost:3000
 ```
 
@@ -23,9 +23,9 @@ Prefer `npm ci` over `npm install` so the lockfile isn't rewritten. There are no
 ## Layout
 
 ```
-nuxt.config.ts            modules, i18n, global CSS, component auto-import, <head>
+nuxt.config.ts            modules, i18n, global CSS, component auto-import, <head>, siteUrl, prerendered routes
 app/
-  app.vue                 <NuxtLayout><NuxtPage/></NuxtLayout>
+  app.vue                 <NuxtLayout><NuxtPage/></NuxtLayout>; per-locale <head>: title, meta, Open Graph, JSON-LD
   layouts/default.vue     Header + <main> + Footer
   pages/index.vue         the only page: stacks the section components in order
   components/
@@ -38,7 +38,10 @@ app/
   assets/images/          logo-qsos-legacy.png (Header.vue), eclipse-foundation-logo*.svg (Footer.vue);
                           logo-qsos.png and logo-qsos-white.png are unused
 i18n/locales/             en.json, fr.json
-public/                   favicon.ico, robots.txt
+server/
+  routes/                 sitemap.xml, llms.txt, llms-full.txt, fr/llms-full.txt (built from the locale files)
+  utils/                  site.ts (absolute page URLs), llms.ts (Markdown version of the page)
+public/                   favicons, icon-192/512.png, site.webmanifest, robots.txt
 ```
 
 Page order in `pages/index.vue`: Hero → Method → MaturityCriteria → ValueProposition → WhyOpen → Roadmap → CTA.
@@ -67,6 +70,14 @@ Page order in `pages/index.vue`: Hero → Method → MaturityCriteria → ValueP
 - Font: Noto Sans from Google Fonts (`@import` in `main.css`).
 - Breakpoints used throughout: `1024px`, `768px`, `480px` (max-width media queries). One-offs: `1280px`, `900px`, and a `min-width: 1025px` desktop grid in the Footer.
 - Method step colours: `--color-define/evaluate/qualify/select`. Radar watermark colours: `--color-software1/2`, `--watermark-*`.
+
+### SEO
+- **Head:** `app.vue` sets the `<title>`, description, Open Graph and Twitter tags from the `meta.*` locale keys, merges the canonical/`hreflang`/`og:locale` tags from `useLocaleHead()`, and adds a JSON-LD `@graph` (`WebSite` + `Organization`). The `title`/`description` in `nuxt.config.ts` are fallbacks only. `og:image` is `icon-512.png` (square, hence `twitter:card: summary`) until a 1200×630 image exists.
+- **Absolute URLs** come from the `siteUrl` constant in `nuxt.config.ts` (also `i18n.baseUrl` and `runtimeConfig.public.siteUrl`) plus `app.baseURL`. Change the domain there only.
+- **Headings:** one `<h1>` (hero), one `<h2>` per section, `<h3>` for cards and roadmap phases; don't skip levels. The hero's "at a glance" `<h2>` uses the global `.visually-hidden` class (`main.css`). Use it only for headings that structure real content, not to add hidden keywords.
+- **Generated files:** `server/routes/` builds `sitemap.xml` (both locales with `xhtml:link` alternates), `llms.txt` ([llmstxt.org](https://llmstxt.org/) summary) and `llms-full.txt` / `fr/llms-full.txt` (the whole page in Markdown, via `buildFullText()` in `server/utils/llms.ts`). They read the locale JSON, so copy changes flow through. When you add or reorder a section, update `buildFullText()` too. Labels used only there live under the `llms.*` locale keys. Each route must be listed in `nitro.prerender.routes`, since nothing links to it.
+- **`theme-color`** metas in `nuxt.config.ts` are hex copies of `--surface` (light/dark); update them if that token changes.
+- Images need `width`/`height` attributes (intrinsic size) to avoid layout shift; CSS still sets the displayed size.
 
 ### In-page navigation
 - Section anchors: `#method`, `#maturity`, `#value`, `#why`, `#roadmap` (`#value` is not in the nav; Hero and CTA have no id). Header and MobileMenu links call a `scrollToSection()` helper that offsets by 80px (`--header-height`) for the sticky header. That helper is duplicated in `Header.vue` and `MobileMenu.vue`, so change both if you touch it.
@@ -109,7 +120,7 @@ Signed-off-by: Full Name <email@example.org>
 
 ## Gotchas and known quirks
 
-- `nuxt.config.ts` sets `app.head.baseUrl: '/qsos/'`, which has no effect: the built app still has `baseURL: "/"` and serves assets from `/_nuxt/`. The Nuxt option for a deploy sub-path is `app.baseURL`. Confirm the deployment target before changing it.
+- `public/robots.txt` hard-codes `Sitemap: https://qsos.org/sitemap.xml`. It doesn't follow `siteUrl` or `NUXT_APP_BASE_URL`, and crawlers only read `robots.txt` at the domain root anyway, so update it by hand if the site moves.
 - No `@iconify-json/lucide` package is installed, so `<Icon name="lucide:...">` icons are fetched at runtime from `api.iconify.design` (the dev server warns `Collection lucide is not found locally`). Icons need network access, and the site depends on that third-party API.
 - The header CTA ("Join Eclipse QSOS") links to `github.com/eclipse-qsos`, while the same button in `MobileMenu` links to `projects.eclipse.org/projects/technology.qsos`.
 - The hero metrics (`4` steps, `16` criteria, `0 - 2` scale, `2.0` method version) are hard-coded in `HeroSection.vue`, not in the locale files.

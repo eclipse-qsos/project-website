@@ -42,6 +42,8 @@
       </div>
 
       <div class="hero-footer">
+        <h2 class="visually-hidden">{{ $t('hero.glance') }}</h2>
+
         <ul class="hero-metadata">
           <li>
             <Icon name="lucide:file-text" />
